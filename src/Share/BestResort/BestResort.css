@@ -1,0 +1,15 @@
+/* .best-product-container{
+    width: 200px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+.best-product{
+    padding-top: 50px;
+
+} */
+
+.resort{
+    background-image: url(../../Source/Image/Chander4.svg);
+    background-size: cover;
+}
