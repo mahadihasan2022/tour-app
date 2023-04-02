@@ -1,0 +1,44 @@
+.container-container{
+    padding-left: 10px;
+
+}
+.container-container h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    padding-bottom: 50px;
+}
+
+.explore-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* display: flex; */
+    gap: 40px;
+    width: 250px;
+    height: 250px;
+}
+.explore img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.explore img:hover{
+    transform: scale(1.2);
+  transition: transform 2s ease-in-out;
+}
+.explore-tittle{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+}
+.explore-location{
+    margin: 0;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 0;
+    font-weight: 700;
+    padding-bottom: 40px;
+
+}

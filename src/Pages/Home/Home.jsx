@@ -3,6 +3,7 @@ import Banner from '../../Share/Banner/Banner';
 import CurrentPackage from '../../Share/CurrentPackage/CurrentPackage';
 import UpcomingEvent from '../../Share/UpcomingEvent/UpcomingEvent';
 import BestResort from '../../Share/BestResort/BestResort';
+import Explore from '../../Share/Explore/Explore';
 
 
 const Home = () => {
@@ -11,7 +12,8 @@ const Home = () => {
             <Banner/>
             <CurrentPackage/>
             <UpcomingEvent/>    
-            <BestResort/>    
+            <BestResort/>  
+            <Explore/>  
         </div>
     );
 };

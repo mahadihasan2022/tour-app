@@ -8,13 +8,35 @@ import './Explore.css';
 
 const Explore = () => {
     return (
-        <div className=''>
+        <div className='container-container'>
+            <h2>Explore Bangladesh</h2>
             <div className="explore-container">
                 <div className="explore">
                     <img src={watch} alt="" />
                     <div className="explore-body">
                         <h1 className="explore-tittle">Tanguar Hour Watch Tower</h1>
                         <h5 className="explore-location"><MdLocationPin style={{color:'red', paddingRight:'5px',fontSize:'30px'}}/>Sunamgonj</h5>
+                    </div>
+                </div>
+                <div className="explore">
+                    <img src={lakmachara} alt="" />
+                    <div className="explore-body">
+                        <h1 className="explore-tittle">Lakmachara</h1>
+                        <h5 className="explore-location"><MdLocationPin style={{color:'red', paddingRight:'5px',fontSize:'30px'}}/>Sunamgonj</h5>
+                    </div>
+                </div>
+                <div className="explore">
+                    <img src={shimul} alt="" />
+                    <div className="explore-body">
+                        <h1 className="explore-tittle">Shimul Bagan</h1>
+                        <h5 className="explore-location"><MdLocationPin style={{color:'red', paddingRight:'5px',fontSize:'30px'}}/>Sunamgonj</h5>
+                    </div>
+                </div>
+                <div className="explore">
+                    <img src={niladri} alt="" />
+                    <div className="explore-body">
+                        <h1 className="explore-tittle">Niladri Lake</h1>
+                        <h5 className="explore-location"><MdLocationPin style={{color:'red',fontSize:'30px'}}/>Sunamgonj</h5>
                     </div>
                 </div>
             </div>
