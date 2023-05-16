@@ -1,11 +1,19 @@
 import React from 'react';
 import "./Item.css";
+import { useNavigate } from 'react-router-dom';
 
 const Item = (props) => {
+const navigate = useNavigate();
+
+
+  const seeDetails = (id) => {
+    navigate(`/currentPackage/${id}`);
+    //  navigate(path);
+  };
 
   
   const { product } = props;
-  const { name, img, duration, amount } = product;
+  const { _id, name, img, duration, amount } = product;
 
 
     return (
@@ -17,7 +25,7 @@ const Item = (props) => {
           <p> {amount}</p>
         </div>
         <div class="card-actions">
-            <button className='btn-info'>See Details</button>
+            <button onClick={() => seeDetails(_id)}  className='btn-info'>See Details</button>
           </div>
       </div>
     );

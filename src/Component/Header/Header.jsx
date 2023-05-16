@@ -81,7 +81,7 @@ const Header = () => {
               className={`btn m-1 ${path === "/blog" && "bg-info"}`}
               to="/contact"
             >
-              Contact
+              About
             </Link>
             <Link
               style={linkStyle}

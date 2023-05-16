@@ -5,6 +5,7 @@ import "./App.css";
 import AOS from "aos";
 import Header from "./Component/Header/Header";
 import Home from "./Pages/Home/Home";
+import SeeDetails from "./Pages/SeeDetails/SeeDetails";
 
 AOS.init();
 
@@ -21,6 +22,7 @@ function App() {
         <Header />
         <Routes>
         <Route path="/" element={<Home/>} />
+        <Route path="/currentPackage/:Id" element={<SeeDetails/>} />
         </Routes>
       </ThemeContextProvider.Provider>
     </AdminContext.Provider>
