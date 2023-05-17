@@ -1,0 +1,54 @@
+.details{
+    display: grid;
+    grid-template-columns: 4fr, 1fr;
+}
+.details-cont{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.btn-btn-day{
+    display: flex;
+    padding-top: 20px;
+}
+.btn-day-1{
+    
+}
+.btn-day-1 button{
+    border: none;
+    font-weight: bold;
+    padding: 2px;
+    background-color: teal;
+    border-radius: 4px;
+
+
+}
+.btn-day-2{
+    padding-left: 30px;
+    
+}
+.btn-day-2 button{
+    border: none;
+    font-weight: bold;
+    padding: 2px;
+    background-color: teal;
+    border-radius: 4px;
+
+
+
+
+}
+.btn-day-3{
+    padding-left: 30px;
+    
+}
+.btn-day-3 button{
+    border: none;
+    font-weight: bold;
+    padding: 2px;
+    background-color: teal;
+    border-radius: 4px;
+}
+/* .food-day-2, 
+.food-day-3{
+    display: none;
+} */

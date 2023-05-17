@@ -1,0 +1,33 @@
+.rightbar{
+    padding-top: 70px;
+    flex: 2;
+    position: sticky;
+    margin: 8px;
+    overflow: scroll;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+.rightbar h1{
+    padding: 12px;
+ font-size: 24px;
+
+ background-color: aqua;
+}
+.calender{
+    -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.38);
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.38);
+}
+.btn-btn-purchase{
+padding-top: 16px;
+}
+.btn-btn-purchase button{
+    padding: 4px;
+
+    border: none;
+    background-color: darkturquoise;
+    width: 100%;
+    font-weight: bold;
+}
