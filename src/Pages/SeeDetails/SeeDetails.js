@@ -4,18 +4,20 @@ import { MdLocationPin } from "react-icons/md";
 import { BsClock } from "react-icons/bs";
 import { BsBagCheck } from "react-icons/bs";
 import { BsPeople } from "react-icons/bs";
+import { GiCheckMark } from "react-icons/gi";
 import Carousel from "react-bootstrap/Carousel";
+import { ImCross } from "react-icons/im";
 import "./SeeDetails.css";
 const SeeDetails = () => {
   const { Id } = useParams();
   const [services, setServices] = useState({});
   const [showtab, setShowTap] = useState(1);
   const {
-    name,
-    img1,
-    img2,
-    img3,
-    img4,
+    name,include1,include2, include3, include4,
+    img1, exclude1, exclude2, type, 
+    img2, person, Weekend, Weekdays, 
+    img3, dayO, day1, day2, day3, adderess, email, phone,
+    img4, notes,
     tittle,
     destination,
     duration,
@@ -46,7 +48,7 @@ const SeeDetails = () => {
       });
   }, [Id, setServices]);
   return (
-    <div style={{ margin: "6px" }}>
+    <div className="seeDetails" style={{ margin: "6px" }}>
       <h1>{name}</h1>
       <p>
         <MdLocationPin style={{ color: "red", fontSize: "24px" }} />
@@ -230,6 +232,131 @@ const SeeDetails = () => {
           </div>
           {/* close tab 3*/}
         </div>
+      </div>
+      <div>
+        <h1 style={{paddingTop:'20px', fontSize:'18px'}}>INCLUDE/EXCLUDE</h1>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(2, 1fr)'}}>
+            <div style={{paddingTop:'30px'}}>
+                <p><GiCheckMark style={{color:'lime'}}/><li>{include1}</li></p>
+                <li>{include2}</li>
+                <li>{include3}</li>
+                <li>{include4}</li>
+            </div>
+            <div style={{paddingTop:'30px'}}>
+            <p><ImCross style={{color:'red'}}/><li>{exclude1}</li></p>
+            <li>{exclude2}</li>
+            </div>
+        </div>
+    
+      </div>
+      <div style={{paddingTop:'24px'}}>
+      <h1 style={{ fontSize:'20px'}}>GROUP FARE (PER PERSON)</h1>
+      <div style={{paddingTop:"14px",display:'grid',gridTemplateColumns:'repeat(2, 1fr)'}}>
+        <div>
+        <h1 style={{paddingTop:'20px', fontSize:'18px',margin:'0'}}>Tittle</h1>
+        <p style={{paddingTop:'8px', fontSize:'14px',margin:'0'}}>{type}</p>
+        </div>
+        <div style={{display:'flex', justifyContent:'space-between'}}>
+            <div>
+            <h1 style={{paddingTop:'20px', fontSize:'18px',margin:'0'}}>Persons</h1>
+        <p style={{paddingTop:'8px', fontSize:'14px',margin:'0'}}>{person}</p>
+            </div>
+            <div>
+            <h1 style={{paddingTop:'20px', fontSize:'18px',margin:'0'}}>Weakends</h1>
+        <p style={{paddingTop:'8px', fontSize:'14px',margin:'0'}}>{Weekend}</p>
+            </div>
+            <div>
+            <h1 style={{paddingTop:'20px', fontSize:'18px',margin:'0'}}>Weakdays</h1>
+        <p style={{paddingTop:'8px', fontSize:'14px',margin:'0'}}>{Weekdays}</p>
+            </div>
+        </div>
+
+      </div>
+    </div>
+    <div>
+        <h1 style={{ paddingTop: "28px", fontSize: "26px", margin: "0" }}>
+          Food Menu{" "}
+        </h1>
+      </div>
+      <div className="col-sm-12">
+        <ul class="nav nav-pills mb-3 mt-1" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              className={showtab === 1 ? "nav-link active" : "nav-link"}
+              onClick={() => handletab(1)}
+            >
+              Day-1
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              className={showtab === 2 ? "nav-link active" : "nav-link"}
+              onClick={() => handletab(2)}
+            >
+              Day-2
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button
+              className={showtab === 3 ? "nav-link active" : "nav-link"}
+              onClick={() => handletab(3)}
+            >
+              Day-3
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          {/* start tab 1*/}
+          <div
+            className={
+              showtab === 1 ? "tab-pane fade show active" : "tab-pane fade show"
+            }
+          >
+          
+            <h6 style={{ paddingTop: "20px" }}>
+            ডে ০ : <span style={{ paddingLeft: "36px" }}>{dayO}</span>
+            </h6>
+            <h6 style={{ paddingTop: "20px" }}>
+            ডে ১ : <span style={{ paddingLeft: "36px" }}>{day1}</span>
+            </h6>
+          </div>
+          {/* close tab 1*/}
+
+          {/* start tab 2*/}
+          <div
+            className={
+              showtab === 2 ? "tab-pane fade show active" : "tab-pane fade"
+            }
+          >
+            <h6 style={{ paddingTop: "20px" }}>
+            ডে ২ : <span style={{ paddingLeft: "36px" }}>{day2}</span>
+            </h6>
+          </div>
+          {/* close tab 2*/}
+
+          {/* start tab 3*/}
+          <div
+            className={
+              showtab === 3 ? "tab-pane fade show active" : "tab-pane fade"
+            }
+          >
+            <h6 style={{ paddingTop: "20px" }}>
+            ডে ৩ : <span style={{ paddingLeft: "36px" }}>{day3}</span>
+            </h6>
+          </div>
+          {/* close tab 3*/}
+        </div>
+      </div>
+      <div>
+        <h4 style={{paddingTop:'20px'}}> Notes</h4>
+        <h6 style={{paddingTop:'8px'}}>{notes}</h6>
+      </div>
+      <div>
+      <h4 style={{paddingTop:'30px'}}> Contacts</h4>
+      <p style={{paddingTop:'10px', margin:'0'}}>Email: {email}</p>
+      <p style={{ margin:'0'}}>Phone: {phone}</p>
+      <p style={{ margin:'0'}}>Address: {adderess}</p>
       </div>
     </div>
   );
