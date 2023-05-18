@@ -7,6 +7,7 @@ import Header from "./Component/Header/Header";
 import Home from "./Pages/Home/Home";
 import SeeDetails from "./Pages/SeeDetails/SeeDetails";
 import Layout from "./Layout/Layout";
+import Package from "./Pages/Package/Package";
 
 AOS.init();
 
@@ -23,6 +24,7 @@ function App() {
         <Header />
         <Routes>
         <Route path="/" element={<Home/>} />
+        <Route path="/package" element={<Package/>} />
         <Route path="/currentPackage/:Id" element={<Layout/>} >
         <Route path="/currentPackage/:Id" element={<SeeDetails/>} />
         </Route>
