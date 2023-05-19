@@ -8,6 +8,8 @@ import Home from "./Pages/Home/Home";
 import SeeDetails from "./Pages/SeeDetails/SeeDetails";
 import Layout from "./Layout/Layout";
 import Package from "./Pages/Package/Package";
+import Event from "./Pages/Event/Event";
+import Resort from "./Pages/Resort/Resort";
 
 AOS.init();
 
@@ -25,6 +27,8 @@ function App() {
         <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/package" element={<Package/>} />
+        <Route path="/event" element={<Event/>} />
+        <Route path="/resort" element={<Resort/>} />
         <Route path="/currentPackage/:Id" element={<Layout/>} >
         <Route path="/currentPackage/:Id" element={<SeeDetails/>} />
         </Route>

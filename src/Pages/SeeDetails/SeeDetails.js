@@ -13,33 +13,15 @@ const SeeDetails = () => {
   const [services, setServices] = useState({});
   const [showtab, setShowTap] = useState(1);
   const {
-    name,include1,include2, include3, include4,
-    img1, exclude1, exclude2, type, 
-    img2, person, Weekend, Weekdays, 
-    img3, dayO, day1, day2, day3, adderess, email, phone,
-    img4, notes,
-    tittle,
-    destination,
-    duration,
-    tourType,
-    groupSize,
-    breakfast1,
-    breakfast2,
-    breakfast3,
-    lunch1,
-    lunch2,
-    lunch3,
-    snacks1,
-    snacks2,
-    snacks3,
-    dinner1,
-    dinner2,
-    dinner3,
-  } = services;
+    name,include1,include2, include3, include4, img1, exclude1, exclude2, type, img2, person, Weekend,
+    Weekdays,  img3, dayO, day1, day2, day3, adderess, email, phone, img4, notes, tittle, destination,
+    duration, tourType, groupSize, breakfast1, breakfast2, breakfast3, lunch1, lunch2, lunch3, snacks1,
+    snacks2, snacks3, dinner1, dinner2, dinner3, } = services;
 
   const handletab = (e) => {
     setShowTap(e);
   };
+
   useEffect(() => {
     fetch(`http://localhost:5000/currentPackage/${Id}`)
       .then((res) => res.json())
@@ -47,6 +29,8 @@ const SeeDetails = () => {
         setServices(data);
       });
   }, [Id, setServices]);
+
+
   return (
     <div className="seeDetails" style={{ margin: "6px" }}>
       <h1>{name}</h1>
@@ -155,7 +139,6 @@ const SeeDetails = () => {
               Day-2
             </button>
           </li>
-
           <li class="nav-item" role="presentation">
             <button
               className={showtab === 3 ? "nav-link active" : "nav-link"}
@@ -275,7 +258,7 @@ const SeeDetails = () => {
     </div>
     <div>
         <h1 style={{ paddingTop: "28px", fontSize: "26px", margin: "0" }}>
-          Food Menu{" "}
+        ITINERARY {" "}
         </h1>
       </div>
       <div className="col-sm-12">
