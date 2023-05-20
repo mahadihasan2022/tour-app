@@ -10,6 +10,7 @@ import Layout from "./Layout/Layout";
 import Package from "./Pages/Package/Package";
 import Event from "./Pages/Event/Event";
 import Resort from "./Pages/Resort/Resort";
+import ResortLayout from "./Layout/ResortLayout";
 
 AOS.init();
 
@@ -31,6 +32,9 @@ function App() {
         <Route path="/resort" element={<Resort/>} />
         <Route path="/currentPackage/:Id" element={<Layout/>} >
         <Route path="/currentPackage/:Id" element={<SeeDetails/>} />
+        </Route>
+        <Route path="/resort" element={<ResortLayout/>} >
+        <Route path="/resort" element={<Resort/>} />
         </Route>
         </Routes>
       </ThemeContextProvider.Provider>
