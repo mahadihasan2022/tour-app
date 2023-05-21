@@ -4,31 +4,27 @@
 -----------------
 ----------------*/
 
-
-.resortLeftBar{
-    flex: 1.2;
-    position: sticky;
-    top: 320px;
-    height: calc(100vh - 70px);
-    overflow: scroll;
-    /* padding: 0 10px; */
-    /* // padding-top: 50px; */
-    &::-webkit-scrollbar{
-      display: none;
-    }
+.resortLeftBar {
+  flex: 1.2;
+  position: sticky;
+  top: 320px;
+  height: calc(100vh - 70px);
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
-.resortLeftBar h1{
+.resortLeftBar h1 {
   font-size: 18px;
   padding-left: 20px;
 }
-.leftBar{
+.leftBar {
   padding-left: 10px;
 }
-.btn-leftBar{
+.btn-leftBar {
   padding-top: 30px;
-
 }
-.leftBar-btn-info{
+.leftBar-btn-info {
   border: none;
   border-radius: 4px;
   background-color: #e11d48;
@@ -40,29 +36,13 @@
 
 
 
-
-/* --------------
------------------
-                                  Resort RightBar
------------------
-----------------*/
-
-/* .resortRightBar{
-    flex: 1.5;
-    position: sticky;
-    top: 320px;
-    height: calc(100vh - 70px);
-    overflow: scroll;
-    &::-webkit-scrollbar{
-      display: none;
-    }
+.detailsRightBar {
+  flex: 2;
+  position: sticky;
+  /* top: 320px; */
+  height: calc(100vh - 70px);
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
-.rightBar{
-  height: 220px;
-  padding-top: 120px;
-}
-.rightBar h6{
-  font-size: 12px;
-  text-align: end;
-  padding-right: 8px;
-} */

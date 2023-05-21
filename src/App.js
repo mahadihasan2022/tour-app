@@ -11,6 +11,8 @@ import Package from "./Pages/Package/Package";
 import Event from "./Pages/Event/Event";
 import Resort from "./Pages/Resort/Resort";
 import ResortLayout from "./Layout/ResortLayout";
+import DetailsLayout from "./Layout/DetailsLayout";
+import ResortDetails from "./Pages/ResortDetails/ResortDetails";
 
 AOS.init();
 
@@ -26,16 +28,19 @@ function App() {
         <GlobalStyles theme={isDarkTheme ? darkTheme : lightTheme} />
         <Header />
         <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/package" element={<Package/>} />
-        <Route path="/event" element={<Event/>} />
-        <Route path="/resort" element={<Resort/>} />
-        <Route path="/currentPackage/:Id" element={<Layout/>} >
-        <Route path="/currentPackage/:Id" element={<SeeDetails/>} />
-        </Route>
-        <Route path="/resort" element={<ResortLayout/>} >
-        <Route path="/resort" element={<Resort/>} />
-        </Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/package" element={<Package />} />
+          <Route path="/event" element={<Event />} />
+          <Route path="/resort" element={<Resort />} />
+          <Route path="/currentPackage/:Id" element={<Layout />}>
+            <Route path="/currentPackage/:Id" element={<SeeDetails />} />
+          </Route>
+          <Route path="/resort" element={<ResortLayout />}>
+            <Route path="/resort" element={<Resort />} />
+          </Route>
+          <Route path="/bestResort/:Id" element={<DetailsLayout />}>
+            <Route path="/bestResort/:Id" element={<ResortDetails />} />
+          </Route>
         </Routes>
       </ThemeContextProvider.Provider>
     </AdminContext.Provider>

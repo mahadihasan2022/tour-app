@@ -1,8 +1,7 @@
-.container-container{
+.container-container {
     padding-left: 10px;
-
 }
-.container-container h2{
+.container-container h2 {
     text-align: center;
     font-size: 40px;
     font-weight: bold;
@@ -10,7 +9,7 @@
     padding-bottom: 50px;
 }
 
-.explore-container{
+.explore-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     /* display: flex; */
@@ -18,27 +17,26 @@
     width: 250px;
     height: 250px;
 }
-.explore img{
+.explore img {
     width: 250px;
     height: 250px;
     border-radius: 50%;
 }
-.explore img:hover{
+.explore img:hover {
     transform: scale(1.2);
-  transition: transform 2s ease-in-out;
+    transition: transform 2s ease-in-out;
 }
-.explore-tittle{
+.explore-tittle {
     font-size: 16px;
     font-weight: bold;
     text-align: center;
     padding-top: 20px;
 }
-.explore-location{
+.explore-location {
     margin: 0;
     font-size: 12px;
     text-align: center;
     padding-top: 0;
     font-weight: 700;
     padding-bottom: 40px;
-
 }

@@ -1,0 +1,113 @@
+.resortDetails{
+    position: sticky;
+    top: 80px;
+    padding-top: 30px;
+    margin: 0;
+    height: calc(100vh - 70px);
+    overflow: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.resortDetails-container h1{
+    font-size: 32px;
+    padding-left: 4px;
+}
+
+
+.resort-header{
+    display: flex;
+    justify-content: space-between;
+}
+.resortDetails-type{
+    padding-top: 50px;
+}
+.resortDetails-type h2{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    padding-left: 4px;
+
+}
+.resortDetails-type p{
+    padding-top: 10px;
+    font-size: 16px;
+    margin: 0;
+    padding-left: 4px;
+
+}
+.resortDetails-feature{
+    padding-top: 50px;
+}
+.resortDetails-feature h2{
+    padding-top: 10px;
+    font-size: 24px;
+    margin: 0;
+    padding-left: 4px;
+
+}
+.resortDetails-feature h3{
+    padding-top: 20px;
+    font-size: 14px;
+    margin: 0;
+    padding-left: 4px;
+
+}
+.resortDetails-feature p{
+    font-size: 14px;
+    margin: 0;
+    padding-left: 4px;
+
+}
+.resortDetails-doubleBed{
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.resortDetails-doubleBed h4{
+    font-size: 18px;
+}
+.resortDetails-singleBed{
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.resortDetails-singleBed h4{
+    font-size: 18px;
+}
+.resort-bedDetails{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+.bedDetails-tittle{
+    width: 250px;
+}
+.bedDetails-tittle p{
+    font-size: 14px;
+}
+.bedDetails-photo{
+    width: 280px;
+    height: 160px;
+}
+.bedDetails-photo img{
+    width: 280px;
+    height: 160px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.38);
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.38);
+}
+.note{
+    padding-top: 50px;
+}
+.note h5{
+    font-size: 20px;
+    margin: 0;
+    padding-top: 12px;
+}
+.note{
+    font-size: 16px;
+    margin: 0;
+}

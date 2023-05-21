@@ -1,10 +1,10 @@
-.best-product-container{
+.best-product-container {
     width: 200px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
 }
-.best-product{
-padding-top: 180px;
-margin: 80px;
+.best-product {
+    padding-top: 180px;
+    margin: 80px;
 }

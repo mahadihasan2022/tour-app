@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import Item from "../Item/Item";
 import "./Product.css";
 
-
-
 const Product = () => {
   const [products, setProducts] = useState([]);
 
@@ -14,13 +12,13 @@ const Product = () => {
   }, []);
 
   return (
-        <div className="product w-100">
-          <div className="product-container w-100">
-            {products.map((product) => (
-              <Item key={product._id} product={product}></Item>
-            ))}
-          </div>
-        </div>
+    <div className="product w-100">
+      <div className="product-container w-100">
+        {products.map((product) => (
+          <Item key={product._id} product={product}></Item>
+        ))}
+      </div>
+    </div>
   );
 };
 

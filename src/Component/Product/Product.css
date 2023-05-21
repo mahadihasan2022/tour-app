@@ -1,7 +1,7 @@
-.product{
+.product {
     padding-top: 20px;
 }
-.product-container{
+.product-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;

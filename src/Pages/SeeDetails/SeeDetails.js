@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { MdLocationPin } from "react-icons/md";
+import { FiShare2 } from "react-icons/fi";
+import { FaFacebook } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
 import { BsClock } from "react-icons/bs";
 import { BsBagCheck } from "react-icons/bs";
 import { BsPeople } from "react-icons/bs";
@@ -13,10 +16,47 @@ const SeeDetails = () => {
   const [services, setServices] = useState({});
   const [showtab, setShowTap] = useState(1);
   const {
-    name,include1,include2, include3, include4, img1, exclude1, exclude2, type, img2, person, Weekend,
-    Weekdays,  img3, dayO, day1, day2, day3, adderess, email, phone, img4, notes, tittle, destination,
-    duration, tourType, groupSize, breakfast1, breakfast2, breakfast3, lunch1, lunch2, lunch3, snacks1,
-    snacks2, snacks3, dinner1, dinner2, dinner3, } = services;
+    name,
+    include1,
+    include2,
+    include3,
+    include4,
+    img1,
+    exclude1,
+    exclude2,
+    type,
+    img2,
+    person,
+    Weekend,
+    Weekdays,
+    img3,
+    dayO,
+    day1,
+    day2,
+    day3,
+    address,
+    email,
+    phone,
+    img4,
+    notes,
+    tittle,
+    destination,
+    duration,
+    tourType,
+    groupSize,
+    breakfast1,
+    breakfast2,
+    breakfast3,
+    lunch1,
+    lunch2,
+    lunch3,
+    snacks1,
+    snacks2,
+    snacks3,
+    dinner1,
+    dinner2,
+    dinner3,
+  } = services;
 
   const handletab = (e) => {
     setShowTap(e);
@@ -30,15 +70,22 @@ const SeeDetails = () => {
       });
   }, [Id, setServices]);
 
-
   return (
-    <div className="seeDetails" style={{ margin: "6px" }}>
-      <h1>{name}</h1>
-      <p>
+    <div className="seeDetails">
+    <h1>{name}</h1>
+      <div className="package-header">
+      <div>
         <MdLocationPin style={{ color: "red", fontSize: "24px" }} />
         <span style={{ paddingLeft: "6px" }}>{destination}</span>
-      </p>
-      <hr size="5" color="green" />
+      </div>
+      <div>
+        <FiShare2  style={{fontSize:'20px'}}/>
+        <span style={{paddingLeft:'10px', color:'lime', fontWeight:'bold'}}>Share Via</span>
+        <FaFacebook style={{fontSize:'32px', color:'#2563eb',paddingLeft:'10px'}} />
+        <FaTwitter style={{fontSize:'32px', color:'yellow',paddingLeft:'10px'}} />
+      </div>
+    </div>
+    <hr size='5' color='lime' />
       <div className="details-cont">
         <div style={{ display: "flex" }}>
           <h1>
@@ -217,48 +264,76 @@ const SeeDetails = () => {
         </div>
       </div>
       <div>
-        <h1 style={{paddingTop:'20px', fontSize:'18px'}}>INCLUDE/EXCLUDE</h1>
-        <div style={{display:'grid',gridTemplateColumns:'repeat(2, 1fr)'}}>
-            <div style={{paddingTop:'30px'}}>
-                <p><GiCheckMark style={{color:'lime'}}/><li>{include1}</li></p>
-                <li>{include2}</li>
-                <li>{include3}</li>
-                <li>{include4}</li>
-            </div>
-            <div style={{paddingTop:'30px'}}>
-            <p><ImCross style={{color:'red'}}/><li>{exclude1}</li></p>
+        <h1 style={{ paddingTop: "20px", fontSize: "18px" }}>
+          INCLUDE/EXCLUDE
+        </h1>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)" }}>
+          <div style={{ paddingTop: "30px" }}>
+            <p>
+              <GiCheckMark style={{ color: "lime" }} />
+              <li>{include1}</li>
+            </p>
+            <li>{include2}</li>
+            <li>{include3}</li>
+            <li>{include4}</li>
+          </div>
+          <div style={{ paddingTop: "30px" }}>
+            <p>
+              <ImCross style={{ color: "red" }} />
+              <li>{exclude1}</li>
+            </p>
             <li>{exclude2}</li>
-            </div>
+          </div>
         </div>
-    
       </div>
-      <div style={{paddingTop:'24px'}}>
-      <h1 style={{ fontSize:'20px'}}>GROUP FARE (PER PERSON)</h1>
-      <div style={{paddingTop:"14px",display:'grid',gridTemplateColumns:'repeat(2, 1fr)'}}>
-        <div>
-        <h1 style={{paddingTop:'20px', fontSize:'18px',margin:'0'}}>Tittle</h1>
-        <p style={{paddingTop:'8px', fontSize:'14px',margin:'0'}}>{type}</p>
+      <div style={{ paddingTop: "24px" }}>
+        <h1 style={{ fontSize: "20px" }}>GROUP FARE (PER PERSON)</h1>
+        <div
+          style={{
+            paddingTop: "14px",
+            display: "grid",
+            gridTemplateColumns: "repeat(2, 1fr)",
+          }}
+        >
+          <div>
+            <h1 style={{ paddingTop: "20px", fontSize: "18px", margin: "0" }}>
+              Tittle
+            </h1>
+            <p style={{ paddingTop: "8px", fontSize: "14px", margin: "0" }}>
+              {type}
+            </p>
+          </div>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <div>
+              <h1 style={{ paddingTop: "20px", fontSize: "18px", margin: "0" }}>
+                Persons
+              </h1>
+              <p style={{ paddingTop: "8px", fontSize: "14px", margin: "0" }}>
+                {person}
+              </p>
+            </div>
+            <div>
+              <h1 style={{ paddingTop: "20px", fontSize: "18px", margin: "0" }}>
+                Weakends
+              </h1>
+              <p style={{ paddingTop: "8px", fontSize: "14px", margin: "0" }}>
+                {Weekend}
+              </p>
+            </div>
+            <div>
+              <h1 style={{ paddingTop: "20px", fontSize: "18px", margin: "0" }}>
+                Weakdays
+              </h1>
+              <p style={{ paddingTop: "8px", fontSize: "14px", margin: "0" }}>
+                {Weekdays}
+              </p>
+            </div>
+          </div>
         </div>
-        <div style={{display:'flex', justifyContent:'space-between'}}>
-            <div>
-            <h1 style={{paddingTop:'20px', fontSize:'18px',margin:'0'}}>Persons</h1>
-        <p style={{paddingTop:'8px', fontSize:'14px',margin:'0'}}>{person}</p>
-            </div>
-            <div>
-            <h1 style={{paddingTop:'20px', fontSize:'18px',margin:'0'}}>Weakends</h1>
-        <p style={{paddingTop:'8px', fontSize:'14px',margin:'0'}}>{Weekend}</p>
-            </div>
-            <div>
-            <h1 style={{paddingTop:'20px', fontSize:'18px',margin:'0'}}>Weakdays</h1>
-        <p style={{paddingTop:'8px', fontSize:'14px',margin:'0'}}>{Weekdays}</p>
-            </div>
-        </div>
-
       </div>
-    </div>
-    <div>
+      <div>
         <h1 style={{ paddingTop: "28px", fontSize: "26px", margin: "0" }}>
-        ITINERARY {" "}
+          ITINERARY{" "}
         </h1>
       </div>
       <div className="col-sm-12">
@@ -296,12 +371,11 @@ const SeeDetails = () => {
               showtab === 1 ? "tab-pane fade show active" : "tab-pane fade show"
             }
           >
-          
             <h6 style={{ paddingTop: "20px" }}>
-            ডে ০ : <span style={{ paddingLeft: "36px" }}>{dayO}</span>
+              ডে ০ : <span style={{ paddingLeft: "36px" }}>{dayO}</span>
             </h6>
             <h6 style={{ paddingTop: "20px" }}>
-            ডে ১ : <span style={{ paddingLeft: "36px" }}>{day1}</span>
+              ডে ১ : <span style={{ paddingLeft: "36px" }}>{day1}</span>
             </h6>
           </div>
           {/* close tab 1*/}
@@ -313,7 +387,7 @@ const SeeDetails = () => {
             }
           >
             <h6 style={{ paddingTop: "20px" }}>
-            ডে ২ : <span style={{ paddingLeft: "36px" }}>{day2}</span>
+              ডে ২ : <span style={{ paddingLeft: "36px" }}>{day2}</span>
             </h6>
           </div>
           {/* close tab 2*/}
@@ -325,21 +399,21 @@ const SeeDetails = () => {
             }
           >
             <h6 style={{ paddingTop: "20px" }}>
-            ডে ৩ : <span style={{ paddingLeft: "36px" }}>{day3}</span>
+              ডে ৩ : <span style={{ paddingLeft: "36px" }}>{day3}</span>
             </h6>
           </div>
           {/* close tab 3*/}
         </div>
       </div>
       <div>
-        <h4 style={{paddingTop:'20px'}}> Notes</h4>
-        <h6 style={{paddingTop:'8px'}}>{notes}</h6>
+        <h4 style={{ paddingTop: "20px" }}> Notes</h4>
+        <h6 style={{ paddingTop: "8px" }}>{notes}</h6>
       </div>
-      <div>
-      <h4 style={{paddingTop:'30px'}}> Contacts</h4>
-      <p style={{paddingTop:'10px', margin:'0'}}>Email: {email}</p>
-      <p style={{ margin:'0'}}>Phone: {phone}</p>
-      <p style={{ margin:'0'}}>Address: {adderess}</p>
+      <div style={{paddingBottom:'50px'}}>
+        <h4 style={{ paddingTop: "30px" }}> Contacts</h4>
+        <p style={{ paddingTop: "10px", margin: "0" }}>Email: {email}</p>
+        <p style={{ margin: "0" }}>Phone: {phone}</p>
+        <p style={{ margin: "0" }}>Address: {address}</p>
       </div>
     </div>
   );
