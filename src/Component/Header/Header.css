@@ -39,7 +39,8 @@
 .detailsRightBar {
   flex: 2;
   position: sticky;
-  /* top: 320px; */
+  padding-left: 10px;
+  top: 320px;
   height: calc(100vh - 70px);
   overflow: scroll;
   &::-webkit-scrollbar {

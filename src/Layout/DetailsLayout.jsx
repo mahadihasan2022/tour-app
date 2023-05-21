@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import DetailsRightBar from '../Component/Header/DetailsRightBar';
+import DetailsRightBar from '../Component/RightBar/DetailsRightBar';
 
 const DetailsLayout = () => {
     return (
