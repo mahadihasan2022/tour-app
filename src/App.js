@@ -13,6 +13,11 @@ import Resort from "./Pages/Resort/Resort";
 import ResortLayout from "./Layout/ResortLayout";
 import DetailsLayout from "./Layout/DetailsLayout";
 import ResortDetails from "./Pages/ResortDetails/ResortDetails";
+import AboutUs from "./Pages/AboutUs/AboutUs";
+import QuestionBox from "./Others/QuestionBox/QuestionBox";
+import Prestigious from "./Others/Prestigious/Prestigious";
+import Community from "./Others/Community/Community";
+import ContactUs from "./Others/ContactUs/ContactUs";
 
 AOS.init();
 
@@ -31,7 +36,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/package" element={<Package />} />
           <Route path="/event" element={<Event />} />
-          <Route path="/resort" element={<Resort />} />
           <Route path="/currentPackage/:Id" element={<Layout />}>
             <Route path="/currentPackage/:Id" element={<SeeDetails />} />
           </Route>
@@ -41,6 +45,11 @@ function App() {
           <Route path="/bestResort/:Id" element={<DetailsLayout />}>
             <Route path="/bestResort/:Id" element={<ResortDetails />} />
           </Route>
+          <Route path="/aboutUs" element={<AboutUs />} />
+          <Route path="/questionBox" element={<QuestionBox />} />
+          <Route path="/prestigious" element={<Prestigious />} />
+          <Route path="/community" element={<Community />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Routes>
       </ThemeContextProvider.Provider>
     </AdminContext.Provider>

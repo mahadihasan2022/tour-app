@@ -1,0 +1,84 @@
+.contact{
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+.contact-container{
+
+}
+.contact-container h1{
+    font-size: 54px;
+    text-align: center;
+}
+.contact-container h2{
+    text-align: center;
+    margin: 0;
+}
+.contact-container p{
+    text-align: center;
+    font-size: 12px;
+    margin: 0;
+}
+.contact-icon{
+    color: red;
+}
+.contact-option{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 20px;
+}
+.message-field{
+    padding-top: 30px;
+    text-align: center;
+}
+.message-field input {
+    width: 60%;
+    height: 30px;
+    border-radius: 4px;
+    padding-left: 12px;
+
+}
+.comment-field{
+    padding-top: 30px;
+    text-align: center;
+}
+.comment-field input{
+    width: 60%;
+    height: 100px;
+    border-radius: 4px;
+    padding-left: 12px;
+}
+.contact-btn{
+    padding-top: 50px;
+    text-align: center;
+}
+.contact-btn button{
+    width: 60%;
+    height: 30px;
+    border-radius: 4px;
+    border: none;
+    background-color: lime;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+.contact-num{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   padding-top: 30px;
+}
+.contact-email{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 20px;
+}
+.contact-address{
+    display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   padding-top: 20px;
+}
+.contact-details hr{
+}
+.contact-logo{
+    display: flex;
+    justify-content: space-evenly;
+}

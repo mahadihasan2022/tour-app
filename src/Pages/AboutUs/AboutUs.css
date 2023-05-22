@@ -1,0 +1,136 @@
+.about {
+  padding-bottom: 50px;
+}
+.about-container {
+  background-color: darkslategray;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.aboutText-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 10px;
+}
+
+.aboutText-container h1 {
+  color: white;
+  padding-top: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+}
+.aboutText-container h2 {
+  color: #fde047;
+  margin: 0;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+}
+.aboutText-container h3 {
+  color: #fb923c;
+  margin: 0;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.aboutDetails-container {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+.aboutDetails-container p {
+  text-align: start;
+  font-size: small;
+  font-weight: bold;
+  font-style: italic;
+  color: white;
+}
+.about-btn-info {
+  padding-top: 10px;
+}
+.about-btn-info button {
+  width: 130px;
+  height: 35px;
+  font-style: italic;
+  font-weight: bold;
+  font-size: medium;
+  cursor: pointer;
+  color: black;
+  background-color: #22c55e;
+  border-radius: 2px;
+  border: none;
+}
+
+.aboutContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-image: url("../../Source/Image/place.svg");
+  background-size: cover;
+  padding-top: 60px;
+  gap: 30px;
+  padding-bottom: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.aboutCard-container {
+  display: flex;
+  border-radius: 4px;
+  background-color: white;
+  width: 350px;
+  -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.434);
+  -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.425);
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.452);
+}
+.about-card {
+  padding-left: 40px;
+}
+.about-card img {
+  padding-top: 40px;
+  padding-right: 8px;
+  width: 64px;
+}
+
+.aboutCard-details {
+  padding-top: 28px;
+  padding-left: 8px;
+}
+.aboutCard-details h1 {
+  text-align: start;
+  color: black;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 25px;
+  margin: 0;
+}
+.aboutCard-details p {
+  font-size: small;
+  text-align: start;
+  font-weight: bold;
+  font-style: italic;
+  color: #059669;
+  margin: 0;
+}
+
+.about-btn-info {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.about-btn-info button {
+  width: 120px;
+  height: 30px;
+  font-weight: bold;
+  font-style: italic;
+  border-radius: 2px;
+  color: black;
+  background-color: #db2777;
+  border: none;
+  cursor: pointer;
+}

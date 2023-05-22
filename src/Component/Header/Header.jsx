@@ -79,7 +79,7 @@ const Header = () => {
               onMouseOver={onMouseOverHandler}
               onMouseOut={onMouseOutHandler}
               className={`btn m-1 ${path === "/blog" && "bg-info"}`}
-              to="/contact"
+              to="/aboutUs"
             >
               About
             </Link>
@@ -88,7 +88,7 @@ const Header = () => {
               onMouseOver={onMouseOverHandler}
               onMouseOut={onMouseOutHandler}
               className={`btn m-1 ${path === "/signup" && "bg-info"}`}
-              to="/contact"
+              to="/signUp"
             >
               SignUp
             </Link>
