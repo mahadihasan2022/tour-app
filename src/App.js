@@ -18,6 +18,8 @@ import QuestionBox from "./Others/QuestionBox/QuestionBox";
 import Prestigious from "./Others/Prestigious/Prestigious";
 import Community from "./Others/Community/Community";
 import ContactUs from "./Others/ContactUs/ContactUs";
+import ForumBox from "./Others/ForumBox/ForumBox";
+import Login from "./Pages/Login/Login";
 
 AOS.init();
 
@@ -50,6 +52,8 @@ function App() {
           <Route path="/prestigious" element={<Prestigious />} />
           <Route path="/community" element={<Community />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/forum" element={<ForumBox />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </ThemeContextProvider.Provider>
     </AdminContext.Provider>
