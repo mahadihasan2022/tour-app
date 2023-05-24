@@ -1,0 +1,84 @@
+.form-box {
+}
+.bg-video {
+    position: absolute;
+    z-index: -1;
+    /* right: 0;
+    bottom: 0; */
+}
+.form-control {
+    background: transparent;
+    font-size: 24px;
+    font-weight: bold;
+    gap: 30px;
+}
+.form-level {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+}
+.form-level h1 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+}
+.form-level form {
+    border: 1.5px solid white;
+    box-sizing: 4px;
+    margin: 0px 30px;
+    padding: 10px;
+    padding-left: 10px;
+    ::-webkit-textfield-decoration-container {
+        border: none;
+        border-bottom: 1.5px solid rgb(14, 10, 255);
+        padding: 10px 10px;
+    }
+}
+.login-btn {
+    width: 100%;
+    padding-top: 30px;
+}
+.login-btn button {
+    width: 100%;
+    height: 40px;
+    border-radius: 30px;
+    background: linear-gradient(45deg, rgb(112, 159, 112), rgb(49, 175, 49), rgb(5, 253, 5));
+    font-size: 22px;
+    font-weight: 700;
+    font-style: italic;
+    text-align: center;
+    border: none;
+}
+.remind {
+    padding-top: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 30px;
+}
+.checkout {
+    width: 14px;
+    height: 14px;
+}
+.forget {
+    padding-left: 76px;
+    padding-top: 6px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.checkbox {
+    display: flex;
+}
+.register {
+    padding-top: 20px;
+}
+.register p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+.register :link {
+    text-decoration: none;
+    padding-left: 8px;
+}
