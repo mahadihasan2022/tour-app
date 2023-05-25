@@ -1,0 +1,155 @@
+.signUp {
+  height: 120vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sign-card {
+  display: flex;
+  width: 70%;
+  min-height: 555px;
+  border: 0.5px solid;
+  border-radius: 15px;
+  background: linear-gradient(rgba(55, 115, 55, 0.858), rgba(35, 35, 182, 0.463)),
+    url("https://www-cdn.eumetsat.int/files/styles/3_4_large/s3/2020-10/ASpot_Register.jpg?h=e52d3e22&itok=_QNw2_IX")
+      center;
+  background-size: cover;
+}
+
+.sign-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px 0 0 15px;
+}
+.sign-left h1 {
+  font-size: 40px;
+  margin-left: 20px;
+  text-align: center;
+}
+.sign-left form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px;
+
+  ::-webkit-textfield-decoration-container {
+    border: none;
+    border-bottom: 1.5px solid rgb(14, 10, 255);
+    padding: 10px 10px;
+  }
+}
+.form-control {
+    background: transparent;
+    font-size: 24px;
+    font-weight: bold;
+    gap: 30px;
+}
+.sign-pass-handle {
+  display: flex;
+  justify-content: left;
+}
+.sign-pass-handle input {
+  width: 20px;
+  height: 20px;
+}
+.sign-btn {
+  margin: 0;
+  width: 100%;
+}
+.sign-btn input {
+  padding: 10px;
+  background-color: wheat;
+  border: none;
+  width: 100%;
+  font-weight: 900;
+  font-size: 20px;
+  font-style: italic;
+  cursor: pointer;
+  border-radius: 40px;
+}
+.primary-sign-btn {
+  width: 100%;
+  margin: 0;
+}
+.primary-sign-btn h2 {
+  color: rgba(235, 71, 12, 0.877);
+  padding-bottom: 16px;
+}
+
+.btn-signBtn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 0 15px;
+  border: 3px solid burlywood;
+  /* background-color: rgba(2, 42, 42, 0.9); */
+  color: burlywood;
+  background: transparent;
+  font-weight: 500;
+  width: 100%;
+  margin: 0;
+}
+
+.vertical{
+    border-left: 3px solid burlywood;
+    min-height: 400px;
+    position: absolute;
+    left: 50%;
+    margin-left: -4px;
+    top: 190px;
+}
+
+
+.sign-right {
+  flex: 1;
+
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 10px;
+  border-radius: 0 15px 15px 0;
+}
+.sign-right    h1 {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 60px;
+    text-align: center;
+    line-height: 60px;
+    padding-top: 20px;
+  }
+  .sign-right  p {
+    font-weight: 400;
+    font-style: italic;
+    text-align: start;
+    padding-top: 30px;
+    padding-left: 14px;
+  }
+  .sign-right   span {
+    text-align: start;
+    font-style: italic;
+    font-weight: bold;
+    padding-left: 14px;
+    padding-top: 20px;
+    color: lime;
+
+  }
+  .login-handle-btn{
+    padding-top: 30px;
+    padding-left: 14px;
+
+
+  }
+  .login-handle-btn  button {
+    font-weight: bold;
+    width: 40%;
+    color: burlywood;
+    font-style: italic;
+    border: 3px solid burlywood;
+    padding: 10px;
+    cursor: pointer;
+    background: transparent;
+    font-size: 20px;
+  }

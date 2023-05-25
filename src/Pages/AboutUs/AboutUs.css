@@ -72,7 +72,7 @@
 .aboutContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  background-image: url("../../Source/Image/place.svg");
+  /* background-image: url("../../Source/Image/place.svg"); */
   background-size: cover;
   padding-top: 60px;
   gap: 30px;
@@ -96,6 +96,9 @@
   padding-top: 40px;
   padding-right: 8px;
   width: 64px;
+}
+.login-icon{
+  position: absolute;
 }
 
 .aboutCard-details {

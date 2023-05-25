@@ -20,6 +20,7 @@ import Community from "./Others/Community/Community";
 import ContactUs from "./Others/ContactUs/ContactUs";
 import ForumBox from "./Others/ForumBox/ForumBox";
 import Login from "./Pages/Login/Login";
+import SignUp from "./Pages/SignUp/SignUp";
 
 AOS.init();
 
@@ -54,6 +55,7 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/forum" element={<ForumBox />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signUp" element={<SignUp/>} />
         </Routes>
       </ThemeContextProvider.Provider>
     </AdminContext.Provider>

@@ -1,3 +1,10 @@
+.end-right {
+  display: flex;
+  gap: 30px;
+  padding-right: 30px;
+}
+
+
 /* --------------
 -----------------
                                   Resort LeftBar
@@ -47,3 +54,4 @@
     display: none;
   }
 }
+
