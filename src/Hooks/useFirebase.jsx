@@ -17,18 +17,18 @@ const useFirebase = () => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        setUser(user);
+        axios(`http://localhost:5000/user/${user?.email}`).then(res => setUser(res.data));
       } else {
         setUser({});
       }
     });
     return () => unsubscribe;
   }, [auth]);
-  const createUserWithEmailAndPasswordHandler = (name, email, password) => {
+  const createUserWithEmailAndPasswordHandler = (displayName, email, password) => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
-        updateProfileHandler(name);
-        setGetUser({ name, email });
+        updateProfileHandler(displayName);
+        setGetUser({ displayName, email });
       })
       .catch((error) => {
         alert("Create unsuccessful. Please try again");
@@ -45,14 +45,14 @@ const useFirebase = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
         .then((result) => {
-            setGetUser({ name: result?.user?.displayName, email: result?.user?.email, img: result?.user?.photoURL})
+            setGetUser({ displayName: result?.user?.displayName, email: result?.user?.email, img: result?.user?.photoURL})
         }).catch((error) => {
             alert('Google sign in unsuccessful. Please try again');
         });
 };
-  const updateProfileHandler = (name) => {
+  const updateProfileHandler = (displayName) => {
     updateProfile(auth.currentUser, {
-      displayName: name,
+      displayName: displayName,
     })
       .then(() => {})
       .catch((error) => {});

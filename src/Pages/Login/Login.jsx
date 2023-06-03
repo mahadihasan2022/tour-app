@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import { TextField } from "@mui/material";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import sajek from "../../Source/Video/sajek.mp4";
 import { FcGoogle } from "react-icons/fc";
 import { GiCheckMark } from "react-icons/gi";
-import { AiFillEye } from "react-icons/ai";
 import "./Login.css";
+import useAuth from "../../Hooks/useAuth";
 
 const Login = () => {
+  const { googleSignInHandler, signInWithEmailAndPasswordHandler, user } = useAuth();
   const { register, handleSubmit, reset } = useForm();
   const [isShowPassword, setIsShowPassword] = useState(false);
+
 
   return (
     <div className="form-box">
@@ -23,7 +25,7 @@ const Login = () => {
         src={sajek}
       ></video>
       <div className="form-level">
-        <form>
+        <form onSubmit={signInWithEmailAndPasswordHandler}>
           <h1>Login Us</h1>
           <TextField
             type="email"
@@ -32,7 +34,6 @@ const Login = () => {
             label="Email"
             variant="standard"
             className="form-control mt-3"
-            required
           />
           <TextField
             type={isShowPassword ? "text" : "password"}
@@ -41,7 +42,6 @@ const Login = () => {
             label="Password"
             variant="standard"
             className="form-control mt-3"
-            required
           />
           <div className="login-btn">
             <button className="btn-btn-login">Login</button>
@@ -60,7 +60,7 @@ const Login = () => {
               <h6 className="forget">Forgat Password</h6>
             </div>
             <div className="register">
-              <p>
+              <p style={{margin:0}}>
                 Don't you have an account?
                 <Link to='/signUp' style={{ color: "burlywood", fontSize: "24px" }}>
                   <GiCheckMark style={{ color: "green", fontSize: "28px" }} />{" "}
@@ -68,9 +68,10 @@ const Login = () => {
                 </Link>
               </p>
             </div>
-          </div>
-          <div className="login-btn">
-            <button className="">
+          </div>       
+        </form>
+        <div className="login-btnInfo">
+            <button onClick={googleSignInHandler}  className="">
               <span className="">
                 <FcGoogle
                   style={{ fontSize: "30px", backGround: "transparent" }}
@@ -79,7 +80,6 @@ const Login = () => {
               Continue with Google
             </button>
           </div>
-        </form>
       </div>
     </div>
   );

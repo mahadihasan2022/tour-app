@@ -21,6 +21,9 @@ import ContactUs from "./Others/ContactUs/ContactUs";
 import ForumBox from "./Others/ForumBox/ForumBox";
 import Login from "./Pages/Login/Login";
 import SignUp from "./Pages/SignUp/SignUp";
+import Profile from "./Users/Profile/Profile";
+import User from "./Users/User/User";
+import LoginPrivateRoute from "./PrivateRoute/LoginPrivateRoute";
 
 AOS.init();
 
@@ -54,8 +57,15 @@ function App() {
           <Route path="/community" element={<Community />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/forum" element={<ForumBox />} />
+          {/* <Route path="/login" element={<Login />} />
+          <Route path="/signUp" element={<SignUp/>} /> */}
+          <Route path="/users" element={<User/>} />
+          <Route path="/userProfile/:id" element={<Profile/>} />
+
+          <Route  element={<LoginPrivateRoute />}>
           <Route path="/login" element={<Login />} />
-          <Route path="/signUp" element={<SignUp/>} />
+          <Route path="/signUp" element={<SignUp />} />
+        </Route>
         </Routes>
       </ThemeContextProvider.Provider>
     </AdminContext.Provider>

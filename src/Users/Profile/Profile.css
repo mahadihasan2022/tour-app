@@ -1,0 +1,10 @@
+.profile{
+    background-color: rgb(19, 72, 55);
+    padding-bottom: 30px;
+}
+.profile-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.profile-card{
+}
