@@ -112,3 +112,54 @@ p {
   font-size: 14px;
   border: none;
 }
+
+
+
+/* cart css */
+
+.cart-container{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+.cart-body h1{
+  font-size: 28px;
+  padding-top: 20px;
+  margin: 0;
+  font-weight: bold;
+}
+.cart-body h2{
+  font-size: 24px;
+  padding-top: 20px;
+  padding-top: 6px;
+  margin: 0;
+}
+.cart-body h5{
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+.cart-body p{
+  font-size: 16px;
+  margin: 0;
+}
+
+.btn-fo{
+  background-color: red;
+  width: 80px;
+  height: 30px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+}
+.btn-btn-fo{
+  background-color: green;
+  width: 80px;
+  height: 30px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-style: italic;
+  border: none;
+}

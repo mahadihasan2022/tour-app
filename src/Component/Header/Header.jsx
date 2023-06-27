@@ -14,12 +14,12 @@ const Header = () => {
   const navigate = useNavigate();
 
   const userProfile = () => {
-    navigate("/profile");
+    navigate("/userProfile/email");
   };
 
   const [isDarkTheme, setIsDarkTheme] = useContext(ThemeContextProvider);
   const location = useLocation();
-  console.log(location.pathname);
+  // console.log(location.pathname);
   const path = location.pathname;
   const onMouseOverHandler = (e) => {
     e.target.style.background = "#00bbff79";

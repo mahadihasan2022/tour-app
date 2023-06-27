@@ -6,3 +6,19 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
 }
+.cartAction {
+    width: 30px;
+    height: 16px;
+    border-radius: 4px;
+    border: none;
+  }
+  .cartAction button {
+    width: 30px;
+    height: 16px;
+    border-radius: 4px;
+    border: none;
+  }
+  .actionButton {
+    display: flex;
+    gap: 20px;
+  }

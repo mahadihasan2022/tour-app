@@ -2,8 +2,10 @@ import {createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthState
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { firebaseInitialize } from "../firebase/firebase.init";
+import { useNavigate } from "react-router-dom";
 firebaseInitialize();
 const useFirebase = () => {
+  const navigate = useNavigate();
   const auth = getAuth();
   const [user, setUser] = useState({});
   const [getUser, setGetUser] = useState({});
@@ -40,6 +42,7 @@ const useFirebase = () => {
       .catch((error) => {
         alert("sign in unsuccessful. Please try again");
       });
+
   };
   const googleSignInHandler = () => {
     const provider = new GoogleAuthProvider();
@@ -49,6 +52,7 @@ const useFirebase = () => {
         }).catch((error) => {
             alert('Google sign in unsuccessful. Please try again');
         });
+
 };
   const updateProfileHandler = (displayName) => {
     updateProfile(auth.currentUser, {

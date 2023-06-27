@@ -2,7 +2,7 @@ import { TextField } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./Profile.css";
 import useAuth from "../../Hooks/useAuth";
 
@@ -10,6 +10,7 @@ const Profile = () => {
 
   const {user, updateProfileHandler} = useAuth();
   console.log(user);
+  const navigate = useNavigate();
 
   const { id } = useParams();
   const [displayName , setDisplayName]= useState(user?.displayName);
@@ -27,7 +28,7 @@ const Profile = () => {
       console.log(res);
     })
     .catch((err) => console.log(err))
-
+    navigate('/');
   }
 
   return (

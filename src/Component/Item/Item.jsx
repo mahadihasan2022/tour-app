@@ -1,16 +1,8 @@
 import React from "react";
 import "./Item.css";
-import { useNavigate } from "react-router-dom";
 
-const Item = (props) => {
-  const navigate = useNavigate();
+const Item = ({ product, handleAddToCart}) => {
 
-  const seeDetails = (id) => {
-    navigate(`/currentPackage/${id}`);
-    //  navigate(path);
-  };
-
-  const { product } = props;
   const { _id, name, img, duration, amount } = product;
 
   return (
@@ -22,7 +14,7 @@ const Item = (props) => {
         <p> {amount}</p>
       </div>
       <div class="card-actions">
-        <button onClick={() => seeDetails(_id)} className="btn-info">
+        <button onClick={() => handleAddToCart(product,_id)} className="btn-info">
           See Details
         </button>
       </div>

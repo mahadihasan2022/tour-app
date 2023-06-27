@@ -58,7 +58,7 @@ const SeeDetails = () => {
     dinner3,
   } = services;
 
-  const handletab = (e) => {
+  const handleTab = (e) => {
     setShowTap(e);
   };
 
@@ -173,7 +173,7 @@ const SeeDetails = () => {
           <li class="nav-item" role="presentation">
             <button
               className={showtab === 1 ? "nav-link active" : "nav-link"}
-              onClick={() => handletab(1)}
+              onClick={() => handleTab(1)}
             >
               Day-1
             </button>
@@ -181,7 +181,7 @@ const SeeDetails = () => {
           <li class="nav-item" role="presentation">
             <button
               className={showtab === 2 ? "nav-link active" : "nav-link"}
-              onClick={() => handletab(2)}
+              onClick={() => handleTab(2)}
             >
               Day-2
             </button>
@@ -189,7 +189,7 @@ const SeeDetails = () => {
           <li class="nav-item" role="presentation">
             <button
               className={showtab === 3 ? "nav-link active" : "nav-link"}
-              onClick={() => handletab(3)}
+              onClick={() => handleTab(3)}
             >
               Day-3
             </button>
@@ -341,7 +341,7 @@ const SeeDetails = () => {
           <li class="nav-item" role="presentation">
             <button
               className={showtab === 1 ? "nav-link active" : "nav-link"}
-              onClick={() => handletab(1)}
+              onClick={() => handleTab(1)}
             >
               Day-1
             </button>
@@ -349,7 +349,7 @@ const SeeDetails = () => {
           <li class="nav-item" role="presentation">
             <button
               className={showtab === 2 ? "nav-link active" : "nav-link"}
-              onClick={() => handletab(2)}
+              onClick={() => handleTab(2)}
             >
               Day-2
             </button>
@@ -358,7 +358,7 @@ const SeeDetails = () => {
           <li class="nav-item" role="presentation">
             <button
               className={showtab === 3 ? "nav-link active" : "nav-link"}
-              onClick={() => handletab(3)}
+              onClick={() => handleTab(3)}
             >
               Day-3
             </button>

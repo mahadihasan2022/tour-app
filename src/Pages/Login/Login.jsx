@@ -9,8 +9,8 @@ import "./Login.css";
 import useAuth from "../../Hooks/useAuth";
 
 const Login = () => {
-  const { googleSignInHandler, signInWithEmailAndPasswordHandler, user } = useAuth();
-  const { register, handleSubmit, reset } = useForm();
+  const { googleSignInHandler, signInWithEmailAndPasswordHandler } = useAuth();
+  const { register } = useForm();
   const [isShowPassword, setIsShowPassword] = useState(false);
 
 
