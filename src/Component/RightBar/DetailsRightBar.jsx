@@ -1,19 +1,27 @@
 import React, { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { BsTelephonePlusFill } from "react-icons/bs";
 import "react-datepicker/dist/react-datepicker.css";
+import { TextField } from "@mui/material";
+import { useForm } from "react-hook-form";
 import "./RightBar.css";
 
 
 
+
 const DetailsRightBar = () => {
+  const navigate = useNavigate();
     const { Id } = useParams();
+  const { register } = useForm();
+  const [email, setEmail] = useState("");
+  const [roomType, setRoomType] = useState("");
     const [services, setServices] = useState({});
   const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
 
-  const { doubleBedType, singleBedType, amount  } = services;
+  const { doubleBedType, singleBedType, amount ,name, location } = services;
 
 
   useEffect(() => {
@@ -24,6 +32,27 @@ const DetailsRightBar = () => {
       });
   }, [Id, setServices]);
 
+  function handleBookings()
+  {
+   // console.warn({ date, groupSize, email, name, duration, destination });
+   let data = { startDate, name, location, email, endDate, amount, roomType }
+   fetch( `http://localhost:5000/resortOrders`, {
+     
+     method: 'PUT',
+     headers:{
+       'Accept':'application/json',
+       'Content-Type':'application/json'
+     },
+     body:JSON.stringify(data)
+   })
+   .then((res) => res.json())
+   .then((data) => {
+     console.log(data);
+   });
+   navigate(`/bookings`);
+    
+ };
+
   return (
     <div className="detailsRightBar">
         <h1>Check-In-Out</h1>
@@ -31,7 +60,7 @@ const DetailsRightBar = () => {
         <div>
         <DatePicker
             selected={startDate}
-            onChange={(date) => setStartDate(date)}
+            onChange={(startDate) => setStartDate(startDate)}
             className="date-picker"
           />
         </div>
@@ -39,7 +68,7 @@ const DetailsRightBar = () => {
             <FaLongArrowAltRight className="check-in-out-icon"/>
         </div>
         <div>
-        <input type="date" name="date" id="date" className="date-picker" />
+        <input   onChange={(e) => setEndDate(e.target.value)} type="date" name="date" id="date" className="date-picker" />
         </div>
       </div>
       <div className="room-list">
@@ -49,13 +78,26 @@ const DetailsRightBar = () => {
       </div>
       <div className="room">
         <h1>Room</h1>
-            <select name="" id="">
+            <select name="" id=""   onChange={(e) => setRoomType(e.target.value)}>
                 <option value={doubleBedType}>{doubleBedType}</option>
                 <option value={singleBedType}>{singleBedType}</option>
             </select>
       </div>
+      <div className="phone-number">
+        <TextField
+            type="email"
+            {...register("email", { required: true })}
+            id="email"
+            label="Email"
+            variant="standard"
+            className="form-control"
+            style={{margin:'0'}}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+      </div>
       <div className="booking-now-btn">
-        <button className="booking">Booking Now</button>
+        <button onClick={handleBookings} className="booking">Booking Now</button>
       </div>
       <div
         style={{

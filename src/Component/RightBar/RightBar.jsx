@@ -30,10 +30,10 @@ const RightBar = () => {
 
 
 
-  function handlePurchase()
+  function handleBookings()
    {
     // console.warn({ date, groupSize, email, name, duration, destination });
-    let data = { date, groupSize, duration, name, destination, email }
+    let data = { date, groupSize, duration, name, destination, email}
     fetch( `http://localhost:5000/orders`, {
       
       method: 'PUT',
@@ -103,7 +103,7 @@ const RightBar = () => {
           />
       </div>
       <div className="btn-btn-purchase">
-        <button onClick={handlePurchase}>Booking Now</button>
+        <button onClick={handleBookings}>Booking Now</button>
       </div>
       <div
         style={{

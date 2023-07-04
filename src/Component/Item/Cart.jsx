@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Cart = ({product, handlePurchase, handleDelete}) => {
-    const { _id, name, duration, amount } = product;
+const Cart = ({product, handleDelete, handlePurchase}) => {
+  const navigate = useNavigate();
+    const { _id } = product;
+ 
     return (
         <div class="cart-container w-100">
       <div class="cart-body">
@@ -11,12 +14,12 @@ const Cart = ({product, handlePurchase, handleDelete}) => {
         <p>Destination: {product.destination}</p>
       </div>
       <div class="cartActions">
-        <button onClick={() => handlePurchase(product,_id)} className="btn-fo">
+        <button onClick={() => handleDelete(_id)} className="btn-fo">
         Delete
         </button>
       </div>
       <div class="cartActions">
-        <button onClick={() => handlePurchase(product,_id)} className="btn-btn-fo">
+        <button onClick={ () => handlePurchase ()} className="btn-btn-fo">
          Purchase 
         </button>
       </div>

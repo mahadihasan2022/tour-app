@@ -29,6 +29,9 @@
 }
 .order-profile{
     padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 200px;
 }
 .order-profile h1{
     padding-left: 80px;
@@ -37,8 +40,8 @@
     padding-top: 50px;
 }
 .orderImage{
-    width: 55%;
-    height: 28%;
+    width: 200px;
+    height: 180px;
     padding-left: 80px;
     padding-top: 20px;
 }

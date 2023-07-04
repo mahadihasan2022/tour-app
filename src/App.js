@@ -36,39 +36,6 @@ function App() {
   const [admin, setAdmin] = useState({});
   const { email } = useParams();
 
-  // const { Id } = useParams();
-  // const [services, setServices] = useState({});
-  // const [showtab, setShowTap] = useState(1);
-
-  // useEffect(() => {
-  //   fetch(`http://localhost:5000/currentPackage/${Id}`)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setServices(data);
-  //     });
-  // }, [Id, setServices]);
-
-  // const [show, setShow] = useState(true);
-  // const [carts, setCarts] = useState([]);
-
-  // const handleAddToCart = (product, id) => {
-  //   navigate(`/currentPackage/${id}`);
-  //   if (carts.indexOf(product) !== -1)
-  //   return;
-  //   setCarts([...carts, product]);
-  // };
-
-  // const handleChange = (product, d) => {
-  //   const ind = carts.indexOf(product);
-  //   const arr = carts;
-  //   arr[ind].amount += d;
-  //   if (arr[ind].amount === 0) arr[ind].amount = 1;
-  //   setCarts([...arr]);
-  // };
-  // useEffect(() => {
-  //   console.log('cart- change');
-  // }, [carts]);
-
   return (
     <AdminContext.Provider value={[admin, setAdmin]}>
       <ThemeContextProvider.Provider value={[isDarkTheme, setIsDarkTheme]}>
@@ -111,6 +78,3 @@ function App() {
   );
 }
 export default App;
-
-// setShow={setShow} size={carts.length}
-// handleChange={handleChange}

@@ -1,10 +1,17 @@
 import React from 'react';
+import { MDBFooter } from 'mdb-react-ui-kit';
 
 const Footer = () => {
     return (
-        <div>
-            <ion-icon name="heart" aria-label="Favorite"></ion-icon>
+        <div style={{paddingTop:'50px'}} className='text-center text-lg-left'>
+        <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+          &copy; {new Date().getFullYear()} Copyright:{' '}
+          <a className='text-dark' href='https://mdbootstrap.com/'>
+            HardWork
+          </a>
         </div>
+      </div>
+  
     );
 };
 
