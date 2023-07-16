@@ -105,8 +105,8 @@ const Header = () => {
                     border: "none",
                     cursor: "pointer",
                     padding: "0px 8px",
-                    margin:'6px',
-                    borderRadius:'4px'                   
+                    margin: "6px",
+                    borderRadius: "4px",
                   }}
                   className="logout"
                 >
@@ -154,7 +154,7 @@ const Header = () => {
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
-                        backgroundColor:'blue'
+                        backgroundColor: "blue",
                       }}
                     />
                   </div>

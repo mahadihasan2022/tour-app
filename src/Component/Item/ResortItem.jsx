@@ -13,8 +13,16 @@ const ResortItem = (props) => {
     navigate(`/bestResort/${id}`);
     //  navigate(path);
   };
-  const {_id, name, img, location, feature, doubleBedType, singleBedType, amount } =
-    product;
+  const {
+    _id,
+    name,
+    img,
+    location,
+    feature,
+    doubleBedType,
+    singleBedType,
+    amount,
+  } = product;
 
   return (
     <div className="resort-cardBody">
@@ -46,7 +54,12 @@ const ResortItem = (props) => {
         <h6>Starting</h6>
         <p>{amount}</p>
         <div className="rightBart-btn">
-          <button onClick={() => seeResortDetails(_id)} className="rightBar-info">See Details</button>
+          <button
+            onClick={() => seeResortDetails(_id)}
+            className="rightBar-info"
+          >
+            See Details
+          </button>
         </div>
       </div>
     </div>

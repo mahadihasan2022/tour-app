@@ -83,20 +83,18 @@ const SignUp = () => {
               <div className="sign-btn">
                 <input type="submit" value="Sign in" />
               </div>
-         
             </form>
             <div className="primary-sign-btn">
               <h2 style={{ textAlign: "center", margin: "0" }}>
-              ------------Or------------
-            </h2>
-            <button onClick={googleSignInHandler} className="btn-signBtn">
-              <span className="text-success rounded-circle p-2">
-              <FcGoogle style={{fontSize:'40px'}}/>
-              
-              </span>
-              Continue with Google
-            </button>
-              </div>
+                ------------Or------------
+              </h2>
+              <button onClick={googleSignInHandler} className="btn-signBtn">
+                <span className="text-success rounded-circle p-2">
+                  <FcGoogle style={{ fontSize: "40px" }} />
+                </span>
+                Continue with Google
+              </button>
+            </div>
           </div>
           <div className="vertical"></div>
           <div className="sign-right">

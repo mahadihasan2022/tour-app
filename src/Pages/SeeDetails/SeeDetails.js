@@ -72,20 +72,28 @@ const SeeDetails = () => {
 
   return (
     <div className="seeDetails">
-    <h1>{name}</h1>
+      <h1>{name}</h1>
       <div className="package-header">
-      <div>
-        <MdLocationPin style={{ color: "red", fontSize: "24px" }} />
-        <span style={{ paddingLeft: "6px" }}>{destination}</span>
+        <div>
+          <MdLocationPin style={{ color: "red", fontSize: "24px" }} />
+          <span style={{ paddingLeft: "6px" }}>{destination}</span>
+        </div>
+        <div>
+          <FiShare2 style={{ fontSize: "20px" }} />
+          <span
+            style={{ paddingLeft: "10px", color: "lime", fontWeight: "bold" }}
+          >
+            Share Via
+          </span>
+          <FaFacebook
+            style={{ fontSize: "32px", color: "#2563eb", paddingLeft: "10px" }}
+          />
+          <FaTwitter
+            style={{ fontSize: "32px", color: "yellow", paddingLeft: "10px" }}
+          />
+        </div>
       </div>
-      <div>
-        <FiShare2  style={{fontSize:'20px'}}/>
-        <span style={{paddingLeft:'10px', color:'lime', fontWeight:'bold'}}>Share Via</span>
-        <FaFacebook style={{fontSize:'32px', color:'#2563eb',paddingLeft:'10px'}} />
-        <FaTwitter style={{fontSize:'32px', color:'yellow',paddingLeft:'10px'}} />
-      </div>
-    </div>
-    <hr size='5' color='lime' />
+      <hr size="5" color="lime" />
       <div className="details-cont">
         <div style={{ display: "flex" }}>
           <h1>
@@ -409,7 +417,7 @@ const SeeDetails = () => {
         <h4 style={{ paddingTop: "20px" }}> Notes</h4>
         <h6 style={{ paddingTop: "8px" }}>{notes}</h6>
       </div>
-      <div style={{paddingBottom:'50px'}}>
+      <div style={{ paddingBottom: "50px" }}>
         <h4 style={{ paddingTop: "30px" }}> Contacts</h4>
         <p style={{ paddingTop: "10px", margin: "0" }}>Email: {email}</p>
         <p style={{ margin: "0" }}>Phone: {phone}</p>

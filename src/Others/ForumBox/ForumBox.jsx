@@ -1,48 +1,48 @@
 import React from "react";
 // import { useState } from "react";
 // import { useForm } from "react-hook-form";
-import './ForumBox.css';
+import "./ForumBox.css";
 
 const ForumBox = () => {
-//   const [firstName, setFirstName] = useState("");
-//   const [lastName, setLastName] = useState("");
-//   const [email, setEmail] = useState("");
-//   const [phoneNumber, setPhoneNumber] = useState("");
-//   const [question, setQuestion] = useState("");
+  //   const [firstName, setFirstName] = useState("");
+  //   const [lastName, setLastName] = useState("");
+  //   const [email, setEmail] = useState("");
+  //   const [phoneNumber, setPhoneNumber] = useState("");
+  //   const [question, setQuestion] = useState("");
 
-//   const {
-//     register,
-//     handleSubmit,
-//     reset,
-//     formState: { errors },
-//   } = useForm();
-//   const fromSubmitHandler = () => {
-//     alert("Success!! Send Your Forum.");
-//     fetch(`http://localhost:5000/forum/${email}`, {
-//       method: "PUT",
-//       body: JSON.stringify({
-//         firstName,
-//         lastName,
-//         email,
-//         phoneNumber,
-//         question,
-//       }),
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//     })
-//       .then((res) => res.json())
-//       .then((data) => {
-//         console.log(data);
-//       });
-//   };
+  //   const {
+  //     register,
+  //     handleSubmit,
+  //     reset,
+  //     formState: { errors },
+  //   } = useForm();
+  //   const fromSubmitHandler = () => {
+  //     alert("Success!! Send Your Forum.");
+  //     fetch(`http://localhost:5000/forum/${email}`, {
+  //       method: "PUT",
+  //       body: JSON.stringify({
+  //         firstName,
+  //         lastName,
+  //         email,
+  //         phoneNumber,
+  //         question,
+  //       }),
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //     })
+  //       .then((res) => res.json())
+  //       .then((data) => {
+  //         console.log(data);
+  //       });
+  //   };
 
   return (
     <div>
       <div className="forumBox">
         <h1>Forum Box</h1>
         <div className="bookingModal">
-          <form >
+          <form>
             <div class="form-group">
               <label for="exampleInputEmail1">First Name</label>
               <br />

@@ -1,6 +1,5 @@
 import React from "react";
-import './QuestionBox.css';
-
+import "./QuestionBox.css";
 
 const QuestionBox = () => {
   return (

@@ -9,10 +9,10 @@
         display: none;
     }
 }
-.seeDetails h1{
+.seeDetails h1 {
     font-size: 32px;
 }
-.package-header{
+.package-header {
     display: flex;
     justify-content: space-between;
 }

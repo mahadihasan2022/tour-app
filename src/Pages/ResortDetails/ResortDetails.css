@@ -1,4 +1,4 @@
-.resortDetails{
+.resortDetails {
     position: sticky;
     top: 80px;
     padding-top: 30px;
@@ -10,88 +10,82 @@
     }
 }
 
-.resortDetails-container h1{
+.resortDetails-container h1 {
     font-size: 32px;
     padding-left: 4px;
 }
 
-
-.resort-header{
+.resort-header {
     display: flex;
     justify-content: space-between;
 }
-.resortDetails-type{
+.resortDetails-type {
     padding-top: 50px;
 }
-.resortDetails-type h2{
+.resortDetails-type h2 {
     font-size: 24px;
     font-weight: bold;
     margin: 0;
     padding-left: 4px;
-
 }
-.resortDetails-type p{
+.resortDetails-type p {
     padding-top: 10px;
     font-size: 16px;
     margin: 0;
     padding-left: 4px;
-
 }
-.resortDetails-feature{
+.resortDetails-feature {
     padding-top: 50px;
 }
-.resortDetails-feature h2{
+.resortDetails-feature h2 {
     padding-top: 10px;
     font-size: 24px;
     margin: 0;
     padding-left: 4px;
-
 }
-.resortDetails-feature h3{
+.resortDetails-feature h3 {
     padding-top: 20px;
     font-size: 14px;
     margin: 0;
     padding-left: 4px;
-
 }
-.resortDetails-feature p{
+.resortDetails-feature p {
     font-size: 14px;
     margin: 0;
     padding-left: 4px;
-
 }
-.resortDetails-doubleBed{
+.resortDetails-doubleBed {
     padding-top: 50px;
     display: flex;
     justify-content: space-between;
 }
-.resortDetails-doubleBed h4{
+.resortDetails-doubleBed h4 {
     font-size: 18px;
 }
-.resortDetails-singleBed{
+.resortDetails-singleBed {
     padding-top: 50px;
     display: flex;
     justify-content: space-between;
 }
-.resortDetails-singleBed h4{
+.resortDetails-singleBed h4 {
     font-size: 18px;
 }
-.resort-bedDetails{
+.resort-bedDetails {
     display: flex;
     justify-content: space-between;
     padding-top: 30px;
 }
-.bedDetails-tittle{
+.bedDetails-tittle {
     width: 250px;
 }
-.bedDetails-tittle p{
+.bedDetails-tittle p {
     font-size: 14px;
 }
-.bedDetails-photo{
+.bedDetails-photo {
     width: 280px;
     height: 160px;
 }
-.bedDetails-photo img{
+.bedDetails-photo img {
     width: 280px;
     height: 160px;
     border-radius: 4px;
@@ -99,15 +93,15 @@
     -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.38);
     box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.38);
 }
-.note{
+.note {
     padding-top: 50px;
 }
-.note h5{
+.note h5 {
     font-size: 20px;
     margin: 0;
     padding-top: 12px;
 }
-.note{
+.note {
     font-size: 16px;
     margin: 0;
 }

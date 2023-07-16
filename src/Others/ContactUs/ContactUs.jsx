@@ -37,40 +37,72 @@ const ContactUs = () => {
       </div>
       <div className="contact-option">
         <div className="contact-message">
-            <div className="message-field">
+          <div className="message-field">
             <input type="text" placeholder="name" />
-            </div>
-            <div className="message-field">
-            <input type="email" name="" id="" placeholder="@email"/>
-            </div>
-            <div className="comment-field">
+          </div>
+          <div className="message-field">
+            <input type="email" name="" id="" placeholder="@email" />
+          </div>
+          <div className="comment-field">
             <input type="text" placeholder="write something..." />
-            </div>
-            <div className="contact-btn">
-                <button>Send</button>
-            </div>
+          </div>
+          <div className="contact-btn">
+            <button>Send</button>
+          </div>
         </div>
         <div className="contact-details">
-            <div className="contact-num">
-               <p><BsTelephonePlusFill style={{textAlign:'start', fontSize:'40px',color:'green'}}/></p> 
-               <span style={{textAlign:'center'}}>+8801409117333</span>
-            </div>
-            <div className="contact-email">
-                <p><HiOutlineMail style={{textAlign:'start',fontSize:'40px',color:'yellow'}}/></p>
-                <span style={{textAlign:'center'}}>mahadi35-2848@diu.edu.bd</span>
-            </div>
-            <div className="contact-address">
-               <p><ImLocation2 style={{textAlign:'start',fontSize:'40px',color:'red'}}/></p>
-               <span style={{textAlign:'center'}}>Dhanmondi 32, Mirpur Road Dhaka 1207</span>
-            </div>
-            <hr size='5' color="lime" />
-            <div className="contact-logo">
-            <p><AiFillFacebook style={{fontSize:'40px', color:'cyan'}}/></p>
-            <p><AiFillTwitterCircle style={{fontSize:'40px', color:'pink'}}/></p>
-            <p><BsLinkedin style={{fontSize:'40px', color:'blue'}}/></p>
-            <p><BsInstagram style={{fontSize:'40px', color:'orangered'}}/></p>
-            <p><TfiGoogle style={{fontSize:'40px', color:'greenyellow'}}/></p>
-        </div>
+          <div className="contact-num">
+            <p>
+              <BsTelephonePlusFill
+                style={{ textAlign: "start", fontSize: "40px", color: "green" }}
+              />
+            </p>
+            <span style={{ textAlign: "center" }}>+8801409117333</span>
+          </div>
+          <div className="contact-email">
+            <p>
+              <HiOutlineMail
+                style={{
+                  textAlign: "start",
+                  fontSize: "40px",
+                  color: "yellow",
+                }}
+              />
+            </p>
+            <span style={{ textAlign: "center" }}>
+              mahadi35-2848@diu.edu.bd
+            </span>
+          </div>
+          <div className="contact-address">
+            <p>
+              <ImLocation2
+                style={{ textAlign: "start", fontSize: "40px", color: "red" }}
+              />
+            </p>
+            <span style={{ textAlign: "center" }}>
+              Dhanmondi 32, Mirpur Road Dhaka 1207
+            </span>
+          </div>
+          <hr size="5" color="lime" />
+          <div className="contact-logo">
+            <p>
+              <AiFillFacebook style={{ fontSize: "40px", color: "cyan" }} />
+            </p>
+            <p>
+              <AiFillTwitterCircle
+                style={{ fontSize: "40px", color: "pink" }}
+              />
+            </p>
+            <p>
+              <BsLinkedin style={{ fontSize: "40px", color: "blue" }} />
+            </p>
+            <p>
+              <BsInstagram style={{ fontSize: "40px", color: "orangered" }} />
+            </p>
+            <p>
+              <TfiGoogle style={{ fontSize: "40px", color: "greenyellow" }} />
+            </p>
+          </div>
         </div>
       </div>
     </div>

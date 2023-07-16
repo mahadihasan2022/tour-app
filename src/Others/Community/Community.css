@@ -3,7 +3,7 @@
   /* background-image: url('../../Source/Image/backGround.svg');
   background-repeat: no-repeat;
   background-size: cover; */
-  background: linear-gradient(45deg,  white, black);
+  background: linear-gradient(45deg, white, black);
 }
 .community h1 {
   font-size: 40px;

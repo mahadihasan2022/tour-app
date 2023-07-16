@@ -7,29 +7,32 @@ import "./Profile.css";
 import useAuth from "../../Hooks/useAuth";
 
 const Profile = () => {
-
-  const {user, updateProfileHandler} = useAuth();
+  const { user, updateProfileHandler } = useAuth();
   console.log(user);
   const navigate = useNavigate();
 
   const { id } = useParams();
-  const [displayName , setDisplayName]= useState(user?.displayName);
-  const [email , setEmail]= useState(user?.email)
-  const [phone , setPhone]= useState(user?.phone);
-  const [address , setAddress]= useState(user?.address)
+  const [displayName, setDisplayName] = useState(user?.displayName);
+  const [email, setEmail] = useState(user?.email);
+  const [phone, setPhone] = useState(user?.phone);
+  const [address, setAddress] = useState(user?.address);
 
- 
-
-  const handleSubmit = (e) =>{
+  const handleSubmit = (e) => {
     e.preventDefault();
     axios
-    .put(`http://localhost:5000/user?addUser=${email}`, {id, displayName, email, address, phone})
-    .then((res) => {
-      console.log(res);
-    })
-    .catch((err) => console.log(err))
-    navigate('/');
-  }
+      .put(`http://localhost:5000/user?addUser=${email}`, {
+        id,
+        displayName,
+        email,
+        address,
+        phone,
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
+    navigate("/");
+  };
 
   return (
     <div className="profile">
@@ -78,7 +81,7 @@ const Profile = () => {
                       variant="standard"
                       className="form-control mt-3 pt-2"
                       value={phone}
-                      onChange={(e) => setPhone(e.target.value)}                    
+                      onChange={(e) => setPhone(e.target.value)}
                     />
                   </div>
                   <div>
@@ -89,7 +92,7 @@ const Profile = () => {
                       variant="standard"
                       className="form-control mt-3 pt-2"
                       value={address}
-                      onChange={(e) => setAddress(e.target.value)}                    
+                      onChange={(e) => setAddress(e.target.value)}
                     />
                   </div>
                   <div className="col-md-3">

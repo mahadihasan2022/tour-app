@@ -8,7 +8,7 @@ import "./Explore.css";
 
 const Explore = () => {
   return (
-    <div style={{paddingBottom:'50px'}} className="container-container">
+    <div style={{ paddingBottom: "50px" }} className="container-container">
       <h2>Explore Bangladesh</h2>
       <div className="explore-container">
         <div className="explore">

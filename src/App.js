@@ -68,7 +68,7 @@ function App() {
             <Route path="/signUp" element={<SignUp />} />
           </Route>
           <Route element={<RequireAuth />}>
-            <Route path= {`/bookings`} element={<Order />} />
+            <Route path={`/bookings`} element={<Order />} />
           </Route>
           <Route path="/users" element={<User />} />
           <Route path="/userProfile/:id" element={<Profile />} />

@@ -40,10 +40,10 @@
   }
 }
 .form-control {
-    background: transparent;
-    font-size: 24px;
-    font-weight: bold;
-    gap: 30px;
+  background: transparent;
+  font-size: 24px;
+  font-weight: bold;
+  gap: 30px;
 }
 .sign-pass-handle {
   display: flex;
@@ -92,15 +92,14 @@
   margin: 0;
 }
 
-.vertical{
-    border-left: 3px solid burlywood;
-    min-height: 400px;
-    position: absolute;
-    left: 50%;
-    margin-left: -4px;
-    top: 190px;
+.vertical {
+  border-left: 3px solid burlywood;
+  min-height: 400px;
+  position: absolute;
+  left: 50%;
+  margin-left: -4px;
+  top: 190px;
 }
-
 
 .sign-right {
   flex: 1;
@@ -112,44 +111,41 @@
   padding-left: 10px;
   border-radius: 0 15px 15px 0;
 }
-.sign-right    h1 {
-    font-weight: bold;
-    font-style: italic;
-    font-size: 60px;
-    text-align: center;
-    line-height: 60px;
-    padding-top: 20px;
-  }
-  .sign-right  p {
-    font-weight: 400;
-    font-style: italic;
-    text-align: start;
-    padding-top: 30px;
-    padding-left: 14px;
-  }
-  .sign-right   span {
-    text-align: start;
-    font-style: italic;
-    font-weight: bold;
-    padding-left: 14px;
-    padding-top: 20px;
-    color: lime;
-
-  }
-  .login-handle-btn{
-    padding-top: 30px;
-    padding-left: 14px;
-
-
-  }
-  .login-handle-btn  button {
-    font-weight: bold;
-    width: 40%;
-    color: burlywood;
-    font-style: italic;
-    border: 3px solid burlywood;
-    padding: 10px;
-    cursor: pointer;
-    background: transparent;
-    font-size: 20px;
-  }
+.sign-right h1 {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 60px;
+  text-align: center;
+  line-height: 60px;
+  padding-top: 20px;
+}
+.sign-right p {
+  font-weight: 400;
+  font-style: italic;
+  text-align: start;
+  padding-top: 30px;
+  padding-left: 14px;
+}
+.sign-right span {
+  text-align: start;
+  font-style: italic;
+  font-weight: bold;
+  padding-left: 14px;
+  padding-top: 20px;
+  color: lime;
+}
+.login-handle-btn {
+  padding-top: 30px;
+  padding-left: 14px;
+}
+.login-handle-btn button {
+  font-weight: bold;
+  width: 40%;
+  color: burlywood;
+  font-style: italic;
+  border: 3px solid burlywood;
+  padding: 10px;
+  cursor: pointer;
+  background: transparent;
+  font-size: 20px;
+}

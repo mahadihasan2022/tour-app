@@ -4,7 +4,7 @@ import axios from "axios";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { TextField } from "@mui/material";
-import './User.css';
+import "./User.css";
 
 const User = () => {
   const [updateProfile, setUpdateProfile] = useState({});
@@ -61,21 +61,21 @@ const User = () => {
   };
 
   return (
-<div className="content">
-<React.Fragment>
-      <Container>
-        <div className="row">
-          <div className="col-sm-12">
-            <h1 className="mt-4 mb-4 fw-bold">Users Information</h1>
-            {message ? (
-              <div className="test-success">
-                <h5>{message}</h5>
-              </div>
-            ) : (
-              <></>
-            )}
-            <form onSubmit={submitUser} className="row g-3">
-              {/* <div className="col-md-3">
+    <div className="content">
+      <React.Fragment>
+        <Container>
+          <div className="row">
+            <div className="col-sm-12">
+              <h1 className="mt-4 mb-4 fw-bold">Users Information</h1>
+              {message ? (
+                <div className="test-success">
+                  <h5>{message}</h5>
+                </div>
+              ) : (
+                <></>
+              )}
+              <form onSubmit={submitUser} className="row g-3">
+                {/* <div className="col-md-3">
                 <label className="from-label">User Name</label>
                 <input
                   type="text"
@@ -93,75 +93,75 @@ const User = () => {
                   onChange={(e) => handleUserEmail(e)}
                 />
               </div> */}
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "20px" }}
-              >
-                <TextField
-                  type="name"
-                  id="name"
-                  label="Name"
-                  variant="standard"
-                  className="form-control mt-3"
-                  onChange={(e) => handleUserName(e)}
-                />
-                <TextField
-                  type="email"
-                  id="email"
-                  label="Email"
-                  variant="standard"
-                  className="form-control mt-3"
-                  onChange={(e) => handleUserEmail(e)}
-                />
-                <div className="col-md-3">
-                  <button type="submit" className="btn btn-primary mt-4">
-                    Submit
-                  </button>
+                <div
+                  style={{ display: "flex", flexDirection: "row", gap: "20px" }}
+                >
+                  <TextField
+                    type="name"
+                    id="name"
+                    label="Name"
+                    variant="standard"
+                    className="form-control mt-3"
+                    onChange={(e) => handleUserName(e)}
+                  />
+                  <TextField
+                    type="email"
+                    id="email"
+                    label="Email"
+                    variant="standard"
+                    className="form-control mt-3"
+                    onChange={(e) => handleUserEmail(e)}
+                  />
+                  <div className="col-md-3">
+                    <button type="submit" className="btn btn-primary mt-4">
+                      Submit
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </form>
-          </div>
-          <div className="col-sm-12 mt-5">
-            <table
-              style={{ border: "2px solid lime",color:'white' }}
-              className="table table-bordered mt-2"
-            >
-              <thead>
-                <tr>
-                  <th scope="col">Sr. No.</th>
-                  <th scope="col">User Name</th>
-                  <th scope="col">User Email</th>
-                  <th scope="col">User action</th>
-                </tr>
-              </thead>
-              <tbody>
-                {userData.map((getUser, index) => (
-                  <tr key={index}>
-                    <th scope="row">{index + 1} </th>
-                    <td>{getUser.name}</td>
-                    <td>{getUser.email}</td>
-                    <td>
-                      <Link
-                        to={`/userProfile/${getUser._id}`}
-                        className="btn btn-success"
-                      >
-                        Edit
-                      </Link>
-                      <button
-                        onChange={() => handleChange(getUser._id)}
-                        className="btn btn-danger"
-                      >
-                        Delete
-                      </button>
-                    </td>
+              </form>
+            </div>
+            <div className="col-sm-12 mt-5">
+              <table
+                style={{ border: "2px solid lime", color: "white" }}
+                className="table table-bordered mt-2"
+              >
+                <thead>
+                  <tr>
+                    <th scope="col">Sr. No.</th>
+                    <th scope="col">User Name</th>
+                    <th scope="col">User Email</th>
+                    <th scope="col">User action</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {userData.map((getUser, index) => (
+                    <tr key={index}>
+                      <th scope="row">{index + 1} </th>
+                      <td>{getUser.name}</td>
+                      <td>{getUser.email}</td>
+                      <td>
+                        <Link
+                          to={`/userProfile/${getUser._id}`}
+                          className="btn btn-success"
+                        >
+                          Edit
+                        </Link>
+                        <button
+                          onChange={() => handleChange(getUser._id)}
+                          className="btn btn-danger"
+                        >
+                          Delete
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
-      </Container>
-    </React.Fragment>
-</div>
+        </Container>
+      </React.Fragment>
+    </div>
   );
 };
 

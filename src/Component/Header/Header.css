@@ -4,7 +4,6 @@
   padding-right: 30px;
 }
 
-
 /* --------------
 -----------------
                                   Resort LeftBar
@@ -41,8 +40,6 @@
   font-weight: bold;
 }
 
-
-
 .detailsRightBar {
   flex: 2;
   position: sticky;
@@ -54,4 +51,3 @@
     display: none;
   }
 }
-

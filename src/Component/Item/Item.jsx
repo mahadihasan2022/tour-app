@@ -1,8 +1,7 @@
 import React from "react";
 import "./Item.css";
 
-const Item = ({ product, handleAddToCart}) => {
-
+const Item = ({ product, handleAddToCart }) => {
   const { _id, name, img, duration, amount } = product;
 
   return (
@@ -14,7 +13,10 @@ const Item = ({ product, handleAddToCart}) => {
         <p> {amount}</p>
       </div>
       <div class="card-actions">
-        <button onClick={() => handleAddToCart(product,_id)} className="btn-info">
+        <button
+          onClick={() => handleAddToCart(product, _id)}
+          className="btn-info"
+        >
           See Details
         </button>
       </div>

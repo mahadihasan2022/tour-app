@@ -9,15 +9,13 @@ const ResortOrder = () => {
   const [products, setProducts] = useState([]);
 
   const handlePurchase = (id) => {
-    const url = `http://localhost:5000/ssl-payment`
-    fetch (url)
-    .then((res) => res.json())
-    .then((data) => {
-      window.location.replace(data.GatewayPageURL)
-    });
-
-   }
-
+    const url = `http://localhost:5000/ssl-payment`;
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        window.location.replace(data.GatewayPageURL);
+      });
+  };
 
   const handleDelete = (id) => {
     const proceed = window.confirm(
@@ -39,8 +37,6 @@ const ResortOrder = () => {
         });
     }
   };
-
-    
 
   useEffect(() => {
     fetch(`http://localhost:5000/resortOrders?email=${user?.email}`)

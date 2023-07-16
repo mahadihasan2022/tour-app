@@ -1,13 +1,12 @@
 import React from "react";
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
-import mahadi from '../../Source/Image/mahadi.png';
-import zara from '../../Source/Image/zara.png';
-import zim from '../../Source/Image/zim.png';
-import jakiya from '../../Source/Image/jakiya.png';
-import mehedi  from '../../Source/Image/mehedi.png';
-import tanzila from '../../Source/Image/tanzila.png';
-import './Prestigious.css';
-
+import mahadi from "../../Source/Image/mahadi.png";
+import zara from "../../Source/Image/zara.png";
+import zim from "../../Source/Image/zim.png";
+import jakiya from "../../Source/Image/jakiya.png";
+import mehedi from "../../Source/Image/mehedi.png";
+import tanzila from "../../Source/Image/tanzila.png";
+import "./Prestigious.css";
 
 const Prestigious = () => {
   return (

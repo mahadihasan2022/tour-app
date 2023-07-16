@@ -13,7 +13,6 @@ const Login = () => {
   const { register } = useForm();
   const [isShowPassword, setIsShowPassword] = useState(false);
 
-
   return (
     <div className="form-box">
       <video
@@ -60,26 +59,29 @@ const Login = () => {
               <h6 className="forget">Forgat Password</h6>
             </div>
             <div className="register">
-              <p style={{margin:0}}>
+              <p style={{ margin: 0 }}>
                 Don't you have an account?
-                <Link to='/signUp' style={{ color: "burlywood", fontSize: "24px" }}>
+                <Link
+                  to="/signUp"
+                  style={{ color: "burlywood", fontSize: "24px" }}
+                >
                   <GiCheckMark style={{ color: "green", fontSize: "28px" }} />{" "}
                   Create Account
                 </Link>
               </p>
             </div>
-          </div>       
+          </div>
         </form>
         <div className="login-btnInfo">
-            <button onClick={googleSignInHandler}  className="">
-              <span className="">
-                <FcGoogle
-                  style={{ fontSize: "30px", backGround: "transparent" }}
-                />
-              </span>
-              Continue with Google
-            </button>
-          </div>
+          <button onClick={googleSignInHandler} className="">
+            <span className="">
+              <FcGoogle
+                style={{ fontSize: "30px", backGround: "transparent" }}
+              />
+            </span>
+            Continue with Google
+          </button>
+        </div>
       </div>
     </div>
   );

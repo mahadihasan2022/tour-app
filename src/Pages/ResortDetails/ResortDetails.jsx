@@ -11,10 +11,41 @@ const ResortDetails = () => {
   const { Id } = useParams();
   const [services, setServices] = useState({});
   const [showtab, setShowTap] = useState(1);
-  const { name, img2, img3, img4, img5, img6, img7, location, resortDetails, facilities1, facilities2, facilities3, facilities4,
-    facilities5, facilities6, facilities7, doubleBedType, amount, doubleBedImg, doubleBedTittle1, doubleBedTittle2, 
-    doubleBedTittle3, doubleBedTittle4, singleBedImg, singleBedTittle1, singleBedTittle2, singleBedTittle3, singleBedTittle4,
-    singleBedType, notes, email, phone, address} = services;
+  const {
+    name,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6,
+    img7,
+    location,
+    resortDetails,
+    facilities1,
+    facilities2,
+    facilities3,
+    facilities4,
+    facilities5,
+    facilities6,
+    facilities7,
+    doubleBedType,
+    amount,
+    doubleBedImg,
+    doubleBedTittle1,
+    doubleBedTittle2,
+    doubleBedTittle3,
+    doubleBedTittle4,
+    singleBedImg,
+    singleBedTittle1,
+    singleBedTittle2,
+    singleBedTittle3,
+    singleBedTittle4,
+    singleBedType,
+    notes,
+    email,
+    phone,
+    address,
+  } = services;
 
   useEffect(() => {
     fetch(`http://localhost:5000/bestResort/${Id}`)
@@ -52,8 +83,8 @@ const ResortDetails = () => {
           </div>
         </div>
         <hr size="5" color="lime" />
-        </div>
-        <div style={{ height: "300" }}>
+      </div>
+      <div style={{ height: "300" }}>
         <Carousel variant="dark">
           <Carousel.Item>
             <img
@@ -131,13 +162,13 @@ const ResortDetails = () => {
       </div>
       <div className="resort-bedDetails">
         <div className="bedDetails-tittle">
-            <p>{doubleBedTittle1}</p>
-            <p>{doubleBedTittle2}</p>
-            <p>{doubleBedTittle3}</p>
-            <p>{doubleBedTittle4}</p>
+          <p>{doubleBedTittle1}</p>
+          <p>{doubleBedTittle2}</p>
+          <p>{doubleBedTittle3}</p>
+          <p>{doubleBedTittle4}</p>
         </div>
         <div className="bedDetails-photo">
-            <img src={doubleBedImg} alt="" />
+          <img src={doubleBedImg} alt="" />
         </div>
       </div>
       <div className="resortDetails-singleBed">
@@ -146,20 +177,20 @@ const ResortDetails = () => {
       </div>
       <div className="resort-bedDetails">
         <div className="bedDetails-tittle">
-            <p>{singleBedTittle1}</p>
-            <p>{singleBedTittle2}</p>
-            <p>{singleBedTittle3}</p>
-            <p>{singleBedTittle4}</p>
+          <p>{singleBedTittle1}</p>
+          <p>{singleBedTittle2}</p>
+          <p>{singleBedTittle3}</p>
+          <p>{singleBedTittle4}</p>
         </div>
         <div className="bedDetails-photo">
-            <img src={singleBedImg} alt="" />
+          <img src={singleBedImg} alt="" />
         </div>
       </div>
       <div className="note">
         <h5>Notes</h5>
         <p>{notes}</p>
       </div>
-      <div style={{paddingBottom:'50px'}}>
+      <div style={{ paddingBottom: "50px" }}>
         <h4 style={{ paddingTop: "30px" }}> Contacts</h4>
         <p style={{ paddingTop: "10px", margin: "0" }}>Email: {email}</p>
         <p style={{ margin: "0" }}>Phone: {phone}</p>
