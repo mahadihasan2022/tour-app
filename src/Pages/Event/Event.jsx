@@ -4,7 +4,7 @@ import close from "../../Source/Image/close.png";
 import { CiImageOff } from "react-icons/ci";
 import { MdElectricBolt } from "react-icons/md";
 import { FcAlarmClock } from "react-icons/fc";
-import "./Event.css";
+import './Event.css';
 
 const Event = () => {
   const eventHandler = () => {

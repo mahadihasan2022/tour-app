@@ -9,6 +9,7 @@ import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Header.css";
 
+
 const Header = () => {
   const { user, logoutHandler } = useAuth();
   const navigate = useNavigate();
